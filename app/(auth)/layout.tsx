@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "X Clone || Home",
+  title: "X Clone || Auth",
   description: "X || Twitter clone Created by Abhishek",
 };
 
