@@ -2,11 +2,12 @@ import Image from "next/image";
 import x from "@/public/x.png";
 import { ThemeToggler } from "../ThemeToggler";
 import { TabsDemo } from "../Tabs";
+import { Search } from "lucide-react";
 
 const Header = () => {
   return (
-    <nav className=" w-full  max-h-20 flex items-center m-2  ">
-      <div>
+    <nav className=" w-full  max-h-20 flex items-center justify-between  ">
+      <div className="  basis-1/5">
         <Image
           src={x}
           alt="x logo"
@@ -15,10 +16,17 @@ const Header = () => {
           className="w-14 h-14 invert dark:invert-0"
         />
       </div>
-      <div className="flex flex-1 items-center mt-2 justify-center ">
+      <div className="flex basis-3/5    items-center mt-2 border  justify-center  ">
         <TabsDemo />
       </div>
-      <div>
+      <div className="md:flex   items-center basis-1/5 space-x-2 hidden ">
+        <div className="flex items-center bg-gray-800  rounded-full p-2 ">
+          <Search />
+          <input
+            placeholder="Search"
+            className=" pl-6 w-40 bg-gray-800 outline-none"
+          />
+        </div>
         <ThemeToggler />
       </div>
     </nav>

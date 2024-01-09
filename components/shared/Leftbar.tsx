@@ -5,7 +5,7 @@ import { Twitter } from "lucide-react";
 
 const Leftbar = () => {
   return (
-    <div className="mb-12 mx-5 md:w-64 w-16  h-full">
+    <div className="mb-12 mx-5 md:w-48 w-16  h-full">
       {sidebarLinks.map((bar) => (
         <Link href={bar.route} key={bar.route}>
           <div className="flex items-center space-x-4 space-y-8 justify-start ">
@@ -15,7 +15,7 @@ const Leftbar = () => {
         </Link>
       ))}
       <Button
-        className="bg-blue-500 w-full hidden md:block mt-6 rounded-full mr-20 text-white"
+        className="bg-blue-500 w-full hidden md:block mt-6 rounded-full mr-14 text-white"
         variant={"ghost"}
       >
         Post

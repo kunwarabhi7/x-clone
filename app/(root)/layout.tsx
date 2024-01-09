@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className} dark:bg-black`}>
+        <body className={`${inter.className} dark:bg-black w-full `}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -32,11 +32,15 @@ export default function RootLayout({
           >
             <Header />
             <main className="flex">
-              <Leftbar />
-              <section className="flex-1 border ">
+              <div className="basis-1/5">
+                <Leftbar />
+              </div>
+              <section className="basis-4/5 md:basis-3/5 border ">
                 <div>{children}</div>
               </section>
-              <RightBar />
+              <div className="basis-1/5 hidden md:block">
+                <RightBar />
+              </div>
             </main>
 
             <Fotter />
