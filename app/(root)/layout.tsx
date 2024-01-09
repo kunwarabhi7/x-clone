@@ -31,9 +31,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main>
+            <main className="flex">
               <Leftbar />
-              <section>
+              <section className="flex-1 border ">
                 <div>{children}</div>
               </section>
               <RightBar />
